@@ -1,63 +1,6 @@
 <?php
 
-function convert_to_impGal($value, $from_unit) {
-  switch($from_unit) {
-    case 'buckets':
-      return $value * 4;
-      break;
-    case 'butts':
-      return $value * 108;
-      break;
-    case 'firkin':
-      return $value * 9;
-      break;
-    case 'hogshead':
-      return $value * 54;
-      break;
-    case 'pints':
-      return $value * 0.125;
-      break;
-    
-    case 'impGal':
-      return $value;
-      break;
-    
-    default:
-      return "Unsupported unit.";
-  }
-}
-  
-function convert_from_impGal($value, $to_unit) {
-  switch($to_unit) {
-    case 'buckets':
-      return $value / 4;
-      break;
-    case 'butts':
-      return $value / 108;
-      break;
-    case 'firkin':
-      return $value / 9;
-      break;
-    case 'hogshead':
-      return $value / 54;
-      break;
-    case 'pints':
-      return $value / 0.125;
-      break;
-    
-    case 'impGal':
-      return $value;
-      break;
-    
-      return "Unsupported unit.";
-  }
-}
-
-function convert_length($value, $from_unit, $to_unit) {
-  $impGal_value = convert_to_impGal($value, $from_unit);
-  $new_value = convert_from_impGal($impGal_value, $to_unit);
-  return $new_value;
-}
+include_once('includes/functions.php');
 
 $from_value = '';
 $from_unit = '';
@@ -76,15 +19,10 @@ if($_POST['submit']) {
   $to_value = convert_length($from_value, $from_unit, $to_unit);
 }
 
+include_once('includes/header.php');
+$page_title ='Convert Length';
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Convert Length</title>
-    <link href="styles.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
+
 
     <div id="main-content">
 
@@ -126,5 +64,5 @@ if($_POST['submit']) {
       <a href="index.php">Return to menu</a>
       
     </div>
-  </body>
-</html>
+  <?php
+    include_once('includes/footer.php');
