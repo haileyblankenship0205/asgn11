@@ -19,11 +19,11 @@ if($_POST['submit']) {
   $to_value = convert_irish_length($from_value, $from_unit, $to_unit);
 }
 
+$page_title ='Irish Measurements';
 include_once('includes/header.php');
-$page_title ='Convert Length';
 ?>
 
-
+    <link href="includes/styles.css" rel="stylesheet">
     <div id="main-content">
 
       <h1>Convert Length</h1>

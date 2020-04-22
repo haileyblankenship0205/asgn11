@@ -19,14 +19,14 @@ if($_POST['submit']) {
   $to_value = convert_length($from_value, $from_unit, $to_unit);
 }
 
-include_once('includes/header.php');
-$page_title ='Convert Length';
+$page_title ='Convert Liquids';
+include_once("includes/header.php");
 ?>
 
-
+    <link href="includes/styles.css" rel="stylesheet">
     <div id="main-content">
 
-      <h1>Convert Length</h1>
+      <h1>Volumizer - Liquid Measurement Converter</h1>
   
       <form action="" method="post">
         
