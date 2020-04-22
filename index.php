@@ -2,8 +2,6 @@
   $page_title = 'Archaic Conversions';
   include_once('includes/header.php')
   ?>
-  <link href="includes/styles.css" rel="stylesheet">
-
     <div id="main-content">
 
       <h1>Measurement Conversion</h1>

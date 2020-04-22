@@ -22,8 +22,6 @@ if($_POST['submit']) {
 $page_title ='Irish Measurements';
 include_once('includes/header.php');
 ?>
-
-    <link href="includes/styles.css" rel="stylesheet">
     <div id="main-content">
 
       <h1>Convert Length</h1>
